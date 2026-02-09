@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Paris Frères - Scooters, Réparation, Services à Pignan</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff6b00;
+        }
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff6b00;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e55a00;
+        }
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-card-content {
+            padding: 20px;
+        }
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #ff6b00;
+        }
+        /* Brands Section */
+        .brands {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .brands h2 {
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .brand-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .brand-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        /* Spoticar Section */
+        .spoticar {
+            padding: 60px 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .spoticar h2 {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+        .spoticar p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #ff6b00;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            color: #ff6b00;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 20px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Garage Paris Frères</div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#scooters">Scooters</a></li>
+                    <li><a href="#reparation">Réparation</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container hero-content">
+            <h1>Garage Paris Frères</h1>
+            <p>Vente de scooters Silence, Citroën, Peugeot - Réparation - Services à Pignan</p>
+            <a href="#contact" class="btn">Prendre rendez-vous</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Vente de scooters">
+                    <div class="service-card-content">
+                        <h3>Vente de Scooters</h3>
+                        <p>Découvrez notre gamme de scooters Silence, Citroën et Peugeot, neufs et d'occasion, avec le label Spoticar.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1551232863-6be0c6867c9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Réparation">
+                    <div class="service-card-content">
+                        <h3>Réparation & Entretien</h3>
+                        <p>Notre atelier prend en charge tous types de réparations et entretiens pour votre scooter ou voiture.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1580519542036-c47de6156a81?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Financement">
+                    <div class="service-card-content">
+                        <h3>Financement & Assurances</h3>
+                        <p>Solutions de financement et assurances sur mesure pour votre achat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scooters" class="brands">
+        <div class="container">
+            <h2>Nos Marques de Scooters</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="https://www.silence.eco/hubfs/Silence%20S01%20Plus%20-%20Fondo%20blanco.png" alt="Scooter Silence">
+                    <h3>Silence</h3>
+                    <p>Scooters électriques innovants et écologiques.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="https://www.citroen.fr/content/dam/citroen/france/vehicules/ami/ami-6kW/ami-6kW-gamma/ami-6kW-gamma-01.jpg" alt="Scooter Citroën">
+                    <h3>Citroën</h3>
+                    <p>Design et technologie pour une mobilité urbaine.</p>
+                </div>
+                <div class="brand-card">
+                    <img src="https://www.peugeot-scooters.com/content/dam/peugeot-scooters/fr/vehicules/peugeot-e-ludix/peugeot-e-ludix-gamma/peugeot-e-ludix-gamma-01.jpg" alt="Scooter Peugeot">
+                    <h3>Peugeot</h3>
+                    <p>Performance et confort pour tous vos trajets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spoticar">
+        <div class="container">
+            <h2>Label Spoticar</h2>
+            <p>Tous nos véhicules d'occasion sont sélectionnés et garantis selon les critères exigeants du label Spoticar, pour vous offrir qualité et sérénité.</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Autres Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Station essence Total">
+                    <div class="service-card-content">
+                        <h3>Station Essence Total</h3>
+                        <p>Faites le plein et profitez de nos services de lavage sur place.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1580519542036-c47de6156a81?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Financement">
+                    <div class="service-card-content">
+                        <h3>Financement</h3>
+                        <p>Des solutions adaptées à votre budget pour l'achat de votre scooter.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Assurances">
+                    <div class="service-card-content">
+                        <h3>Assurances</h3>
+                        <p>Protégez votre véhicule avec nos offres d'assurance sur mesure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="services">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p>Garage Paris Frères<br>
+                Adresse : [Insérer l'adresse à Pignan]<br>
+                Téléphone : [Insérer le numéro]<br>
+                Email : [Insérer l'email]</p>
+                <p>Ouvert du lundi au samedi, de 8h à 19h.</p>
+                <a href="tel:[Insérer le numéro]" class="btn">Nous appeler</a>
+                <a href="mailto:[Insérer l'email]" class="btn">Nous écrire</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Garage Paris Frères</h3>
+                    <p>Vente, réparation et services pour scooters et voitures à Pignan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#scooters">Scooters</a></li>
+                        <li><a href="#reparation">Réparation</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Adresse : [Insérer l'adresse]<br>
+                    Téléphone : [Insérer le numéro]<br>
+                    Email : [Insérer l'email]</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">📺</a>
+            </div>
+            <p style="margin-top: 20px;">&copy; 2026 Garage Paris Frères. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
