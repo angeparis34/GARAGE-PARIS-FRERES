@@ -3,397 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Paris Frères - Scooters, Réparation, Station Total à Pignan</title>
     <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* Header */
-        header {
-            background: #1a1a1a;
-            color: white;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 30px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ff6b00;
-        }
-        /* Hero Section */
-        .hero {
-            background: url("https://image2url.com/r2/default/images/1770729631462-fa7a813c-4ec9-487c-a842-3f32c1e33a64.jpg") no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-            position: 150px 0;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-        .btn {
-            display: inline-block;
-            background: #ff6b00;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #e55a00;
-        }
-        /* Services Section */
-        .services {
-            padding: 60px 0;
-            background: #f9f9f9;
-        }
-        .services h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 36px;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .service-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .service-card-content {
-            padding: 20px;
-        }
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: #ff6b00;
-        }
+        /* ... (le reste de ton CSS existant) ... */
+
         /* Brands Section */
         .brands {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
-        }
-        .brands h2 {
-            margin-bottom: 40px;
-            font-size: 36px;
-        }
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .brand-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .brand-card img {
-            width: 100%;
-            height: 120px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-        /* Spoticar Section */
-        .spoticar {
-            padding: 60px 0;
-            background: #f9f9f9;
-            text-align: center;
-        }
-        .spoticar h2 {
-            margin-bottom: 20px;
-            font-size: 36px;
-        }
-        .spoticar p {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 18px;
-        }
-        /* Footer */
-        footer {
             background: #1a1a1a;
             color: white;
-            padding: 40px 0 20px;
-            text-align: center;
         }
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+        .brands h2 {
+            font-size: 36px;
             margin-bottom: 30px;
-        }
-        .footer-section h3 {
-            margin-bottom: 20px;
-            color: #ff6b00;
-        }
-        .footer-section ul {
-            list-style: none;
-        }
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-        .footer-section ul li a {
             color: white;
-            text-decoration: none;
         }
-        .footer-section ul li a:hover {
-            color: #ff6b00;
-        }
-        .social-links {
+        .brands-logos {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            align-items: center;
+            gap: 80px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
         }
-        .social-links a {
-            color: white;
-            font-size: 24px;
-            text-decoration: none;
+        .brand-logo {
+            height: 80px;
+            filter: brightness(0) invert(1);
         }
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-            }
-            nav ul {
-                margin-top: 20px;
-            }
-            nav ul li {
-                margin: 0 10px;
-            }
-            .hero h1 {
-                font-size: 36px;
-            }
+        .brand-info {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">Garage Paris Frères</div>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="https://www.silence.eco/fr">Scooters</a></li>
-                    <li><a href="#reparation">Réparation</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- ... (le reste de ton HTML existant) ... -->
 
-    <section id="accueil" class="hero">
-        <div class="container hero-content">
-            <h1></h1>
-            <p> </p>
-            <a </a>
-        </div>
-    </section>
-
-    <section id="scooters" class="brands">
+    <section class="brands">
         <div class="container">
-            <h2>Nos Marques</h2>
-            <div class="brands-grid">
-                <div class="brand-card">
-                    <img src="https://erp.scoot-elec.com/wp-content/uploads/2025/03/images-1.png" alt="Scooter Silence">
-                    <h3>Silence</h3>
-                    <p>Silence, le scooter star, roulez zen électriquement et sans bruit!</p>
-                <div class="brand-card">
+            <h2>GARAGE PARIS FRÈRES</h2>
+            <div class="brands-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Citroen_logo.svg/1200px-Citroen_logo.svg.png" alt="Citroën" class="brand-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Peugeot_logo.svg/1200px-Peugeot_logo.svg.png" alt="Peugeot" class="brand-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Silence_logo.svg/1200px-Silence_logo.svg.png" alt="Silence" class="brand-logo">
             </div>
-                </div>
-                    <img src="https://static.vecteezy.com/system/resources/previews/020/500/424/original/citroen-brand-new-logo-car-symbol-with-name-white-design-french-automobile-illustration-with-black-background-free-vector.jpg" alt="Citroën">
-                    <h3>Citroën</h3>
-                    <li><a href="https://www.citroen.fr/">Choisissez Citroën: l'innovation roulante, avec un confort révolutionnaire!</a></li>
-                <div class="brand-card">
-            </div>
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.n41sgI2iy8hREl7-UYSxrQHaD5?pid=Api&P=0&h=180" alt="Peugeot">
-                    <h3>Peugeot</h3>
-                    <li><a href="https://www.peugeot.fr/index-subcontent/home.html">Peugeot, la marque n°1 dans le coeur des Français- optez pour l'exellence tricolore!</a></li>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-     <section class="services">
-        <div class="container">
-            <h2>Nos Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://resources-vgzlaxdagifnmqmb.silence.eco/silence/public/webp/open-graph-S02.webp?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Vente de scooters">
-                    <div class="service-card-content">
-                        <h3>Vente de Scooters</h3>
-                        <p>Découvrez notre gamme de scooters Silence, n'hésitez pas à nous contacter pour plus d'imformations!</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://ggestpierre.fr/wp-content/uploads/2024/09/PEUGEOT-NEYDENS_RENDEZ-VOUS-ATELIER_AGIR-scaled.webp"Réparation">
-                    <div class="service-card-content">
-                        <h3>Réparation & Entretien</h3>
-                        <p>Notre atelier prend en charge tous types de réparations et entretiens pour votre scooter ou voiture.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://www.credit-auto-facile.com/wp-content/uploads/2020/03/psa-finance-300x158.png"Financement">
-                    <div class="service-card-content">
-                        <h3>Financement & Assurances</h3>
-                        <p>Solutions de financement et assurances sur mesure pour votre achat.</p>
-                    </div>
-                </div>
+            <div class="brand-info">
+                68 avenue du Général Grollier - 34570 Pignan<br>
+                peugeotpignan@parisfreres.fr
             </div>
         </div>
     </section>
 
-    <section class="spoticar">
-        <div class="container">
-            <h2>Label Spoticar</h2>
-            <p>Tous nos véhicules d'occasion sont sélectionnés et garantis selon les critères exigeants du label Spoticar, pour vous offrir qualité et sérénité.</p>
-            <a href="https://peugeotpignan.espacevo.fr/" class="btn">En savoir plus</a>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Nos Autres Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://www.grapheine.com/wp-content/uploads/2021/06/Logo-TotalEnergies-2021-1.jpg">
-                    <div class="service-card-content">
-                        <h3>Station TOTAL ENERGIE</h3>
-                        <p>Faites le plein et profitez de votre véhicule en toute simplicité.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://wash-totalenergies.fr/wp-inside/uploads/2025/06/opengraph-wash-totalenergies.jpg">
-                    <div class="service-card-content">
-                        <h3>Station TOTAL WASH</h3>
-                        <p>Profitez de nos services de lavage pour garder votre véhicule propre.</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://le-de.cdn-website.com/48251e36202e4fc7880f33a3ff656065/dms3rep/multi/opt/AdobeStock_828617069-1920w.jpeg" alt="Carrosserie">
-                    <div class="service-card-content">
-                        <h3>Carrosserie Multimarques</h3>
-                        <p>Remettez la carrosserie votre véhicule comme à son premier jour.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="services">
-        <div class="container">
-            <h2>Contactez-nous</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p>Garage Paris Frères<br>
-                Adresse : 68 avenue du général grollier 34570 Pignan<br>
-                Téléphone : 04.67.68.54.68<br>
-                Email : ange@parisfreres.fr / peugeotpignan@parisfreres.fr</p>
-                <p>Ouvert du lundi au samedi, de 8h à 18h.</p>
-                <a href="tel:0467685468" class="btn">Nous appeler</a>
-                <a href="mailto:ange@parisfreres.fr" class="btn">Nous écrire</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Garage Paris Frères</h3>
-                    <p>Vente, réparation et services pour scooters et voitures à Pignan.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Liens utiles</h3>
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#scooters">Scooters</a></li>
-                        <li><a href="#reparation">Réparation</a></li>
-                        <li><a href="#services">Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Adresse : 68 avenue du général grollier 34570 Pignan<br>
-                    Téléphone : 04.67.68.54.68<br>
-                    Email : peugeotpignan@parisfreres.fr</p>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="#">📘</a>
-                <a href="#">📷</a>
-                <a href="#">📺</a>
-            </div>
-            <p style="margin-top: 20px;">&copy; 2026 Garage Paris Frères. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <!-- ... (le reste de ton HTML existant) ... -->
 </body>
 </html>
